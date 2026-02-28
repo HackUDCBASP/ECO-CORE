@@ -34,7 +34,6 @@ func show_exclamation() -> void:
 		exclamation_mark = exclamation_scene.instantiate()
 		current_player.add_child(exclamation_mark)
 		exclamation_mark.position = Vector3(0, 2.0, 0)
-		exclamation_mark.rotate_y(deg_to_rad(270))
 
 func hide_exclamation() -> void:
 	if exclamation_mark != null:
@@ -58,7 +57,7 @@ func start_dialog() -> void:
 	Dialogic.start("scanf")
 	Dialogic.timeline_ended.connect(_on_dialog_ended)
 	
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(60).timeout
 	end_dialog()
 
 func end_dialog() -> void:

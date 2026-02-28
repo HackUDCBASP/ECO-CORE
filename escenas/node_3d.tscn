@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=14 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/tile.tres" id="1_3dd21"]
 [ext_resource type="Script" path="res://escenas/character_body_3d.gd" id="2_yyuaf"]
@@ -23,6 +23,10 @@ tonemap_exposure = 1.17
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6btbb"]
 size = Vector3(4.17981, 3.43695, 3.98718)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jvis2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7ar0m"]
 
 [node name="Juego" type="Node3D"]
 
@@ -2538,5 +2542,13 @@ shape = SubResource("BoxShape3D_6btbb")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.20668, 0)
 mesh = ExtResource("4_ha46q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Area3D/CollisionShape3D/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20668, 0)
+physics_material_override = SubResource("PhysicsMaterial_jvis2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D/CollisionShape3D/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.584308, 0)
+shape = SubResource("CylinderShape3D_7ar0m")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

@@ -5,7 +5,7 @@ var can_interact := false
 var exclamation_mark: Node3D = null
 var dialog_active := false
 
-@onready var exclamation_scene = preload("res://modelos/placeholderexclamation.tscn")
+@onready var exclamation_scene = preload("res://modelos/E.glb")
 @export var interact_action := "interact"
 
 signal dialog_started
@@ -34,6 +34,7 @@ func show_exclamation() -> void:
 		exclamation_mark = exclamation_scene.instantiate()
 		current_player.add_child(exclamation_mark)
 		exclamation_mark.position = Vector3(0, 2.0, 0)
+		exclamation_mark.rotate_y(deg_to_rad(270))
 
 func hide_exclamation() -> void:
 	if exclamation_mark != null:
@@ -74,12 +75,10 @@ func end_dialog() -> void:
 	print("Dialog ended, movement restored.")
 
 func block_player_movement(block: bool) -> void:
-	# Method 1: Disable the player's movement script entirely
+
 	if current_player != null and current_player.has_method("set_movement_enabled"):
-		# If your player script has a custom method to enable/disable movement
 		current_player.set_movement_enabled(not block)
 	elif current_player != null and current_player.has_node("MovementScript"): 
-		# Alternatively, disable a specific script node
 		var movement_script = current_player.get_node("MovementScript")
 		if movement_script != null:
 			movement_script.set_process(not block)

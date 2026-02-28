@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=11 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/tile.tres" id="1_3dd21"]
 [ext_resource type="Script" path="res://escenas/character_body_3d.gd" id="2_yyuaf"]
 [ext_resource type="Script" path="res://escenas/scanf.gd" id="3_ce11i"]
+[ext_resource type="ArrayMesh" uid="uid://dgjx3eugv7k5r" path="res://modelos/scanf_azul.tres" id="4_ha46q"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_85whk"]
 
@@ -2525,7 +2526,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7878, 0.729504, -12.179)
 script = ExtResource("3_ce11i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44791, 1.5607, 22.4886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.77413, 1.5607, 22.4886)
 shape = SubResource("BoxShape3D_6btbb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.20668, 0)
+mesh = ExtResource("4_ha46q")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=24 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/tile.tres" id="1_3dd21"]
 [ext_resource type="Script" path="res://escenas/juego.gd" id="1_vst57"]
@@ -8,6 +8,31 @@
 [ext_resource type="ArrayMesh" uid="uid://dgjx3eugv7k5r" path="res://modelos/scanf_azul.tres" id="4_ha46q"]
 [ext_resource type="PackedScene" uid="uid://c7an7ggnyms47" path="res://escenas/menu.tscn" id="7_qhabo"]
 [ext_resource type="PackedScene" uid="uid://ci1gfa11j3n3d" path="res://escenas/repoandando.tscn" id="8_tu38t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3r8pu"]
+albedo_color = Color(0.084, 0.42, 0.1288, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlw5r"]
+albedo_color = Color(0.33, 0.33, 0.33, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qh1vd"]
+albedo_color = Color(0.43, 0.30229, 0.0043, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wippl"]
+albedo_color = Color(0.69, 0.583855, 0.2001, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rgsy"]
+albedo_color = Color(0.308, 0.7315, 0.77, 1)
+roughness = 0.43
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2e7w"]
+albedo_color = Color(0.25, 0.189167, 0.0675, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_piwht"]
+albedo_color = Color(0.2208, 0.22448, 0.23, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mwky"]
+albedo_color = Color(0.211765, 0.635294, 0.270588, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n5bw5"]
 radius = 0.853691
@@ -35,6 +60,49 @@ size = Vector3(4.17981, 3.43695, 3.98718)
 script = ExtResource("1_vst57")
 
 [node name="Mapa" type="Node3D" parent="."]
+
+[node name="CSGCombiner3D9" type="CSGCombiner3D" parent="Mapa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19, 0, 0)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_3r8pu")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92, 0, 0)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_tlw5r")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0.000907571, 0, -0.000907571, 1, 8.65, 0, 0)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_qh1vd")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.38, 0, 0)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_wippl")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.042, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_8rgsy")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_u2e7w")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.50327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_piwht")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="Mapa/CSGCombiner3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+material = SubResource("StandardMaterial3D_5mwky")
 
 [node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Mapa"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)

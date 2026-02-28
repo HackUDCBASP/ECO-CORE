@@ -14,13 +14,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # Versión estable
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-license-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-license-
+
       - name: Check each addon has LICENSE
         run: |
           missing=false
           for dir in addons/*; do
-            if [ -d "$dir" ] && [ ! -f "$dir/LICENSE" ]; then
-              echo "Missing LICENSE in $dir"
-              missing=true
+            if [ -d "$dir" ]; then
+              # Busca cualquier archivo que empiece por "LICENSE" (insensible a mayúsculas/minúsculas)
+              if ! find "$dir" -maxdepth 1 -iname "license*" -print -quit | grep -q .; then
+                echo "Missing LICENSE file in $dir"
+                missing=true
+              fi
             fi
           done
           if [ "$missing" = true ]; then
@@ -39,14 +55,23 @@ jobs:
       - name: Fail if license is not allowed
         run: |
           ALLOWED="MIT|BSD-2-Clause|BSD-3-Clause|Apache-2.0|GPL-2.0|GPL-3.0"
-          forbidden=$(grep -Po '"key": "\K[^"]+' licenses.json | grep -vE "$ALLOWED" || true)
+          # Usa jq para extraer todas las claves de licencia (más robusto)
+          forbidden=$(jq -r '.files[].licenses[].key' licenses.json 2>/dev/null | grep -vE "$ALLOWED" | sort -u || true)
           if [ -n "$forbidden" ]; then
-            echo "Forbidden licenses detected: $forbidden"
+            echo "Forbidden licenses detected:"
+            echo "$forbidden"
             exit 1
           fi
 
+      - name: Install gdtoolkit (lint)
+        run: |
+          pip install gdtoolkit==4.4.0
+
+      - name: Debug config file (optional)
+        run: |
+          echo "=== .gdlintrc content (if exists) ==="
+          cat .gdlintrc || echo "No .gdlintrc file"
+
       - name: Run gdlint
         run: |
-          pip install gdtoolkit
-          # Si no tienes gdlint.toml, gdlint usa defaults
           gdlint .

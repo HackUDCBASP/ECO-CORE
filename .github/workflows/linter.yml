@@ -17,10 +17,25 @@ jobs:
       - name: Instalar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'  # Versión estable
 
-      - name: Instalar gdtoolkit
-        run: pip install gdtoolkit
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-linter-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-linter-
+
+      - name: Instalar gdtoolkit (versión fija)
+        run: pip install gdtoolkit==4.4.0
+
+      - name: Depurar configuración (opcional)
+        run: |
+          echo "=== Archivos de configuración ==="
+          ls -la .gdlintrc* pyproject.toml 2>/dev/null || echo "No config files"
+          echo "=== Contenido de .gdlintrc ==="
+          cat .gdlintrc 2>/dev/null || echo "Archivo .gdlintrc no encontrado"
 
       - name: Ejecutar gdlint
         run: gdlint .

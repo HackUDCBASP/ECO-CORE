@@ -1,6 +1,8 @@
+[music path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" fade="10.0" volume="0.0"]
+[sound path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" volume="1.0"]
 Klep: Anda, Zuri, por fin vuelves con las cerillas.
 Vermillion: Eso, y con quien vienes ahora Zuri?
 Scanf: Pues no se muy bien quien es, pero dice que viene para asegurarse de que hacemos las cosas bien por aquí.
 Vermillion: Bueno si, menos cháchara y más hacer la hoguera.
-Tú: Un momento, vais a dejar así la hoguera? Podrías quemar el bosque entero si no sois cuidadosos.	
+Tú: Un momento, vais a dejar así la hoguera? Podrías quemar el bosque entero si no sois cuidadosos.
 Tú: Deberías de colocar unas piedras alrededor de la hoguera para que el fuego no se propague.

@@ -1,0 +1,26 @@
+name: GDScript Linter
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar gdtoolkit
+        run: pip install gdtoolkit
+
+      - name: Ejecutar gdlint
+        run: gdlint .

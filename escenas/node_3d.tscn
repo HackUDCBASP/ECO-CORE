@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=16 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/tile.tres" id="1_3dd21"]
+[ext_resource type="Script" path="res://escenas/juego.gd" id="1_vst57"]
 [ext_resource type="Script" path="res://escenas/character_body_3d.gd" id="2_yyuaf"]
 [ext_resource type="Script" path="res://escenas/spring_arm_3d.gd" id="3_1pben"]
 [ext_resource type="Script" path="res://escenas/scanf.gd" id="3_ce11i"]
 [ext_resource type="ArrayMesh" uid="uid://dgjx3eugv7k5r" path="res://modelos/scanf_azul.tres" id="4_ha46q"]
 [ext_resource type="ArrayMesh" uid="uid://fylju88c6xmy" path="res://modelos/Drapy.tres" id="4_ypkyq"]
+[ext_resource type="PackedScene" uid="uid://c7an7ggnyms47" path="res://escenas/menu.tscn" id="7_qhabo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6f8al"]
 
@@ -28,6 +30,7 @@ size = Vector3(4.17981, 3.43695, 3.98718)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7ar0m"]
 
 [node name="Juego" type="Node3D"]
+script = ExtResource("1_vst57")
 
 [node name="Mapa" type="Node3D" parent="."]
 
@@ -2554,5 +2557,7 @@ physics_material_override = SubResource("PhysicsMaterial_jvis2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D/CollisionShape3D/MeshInstance3D/StaticBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.584308, 0)
 shape = SubResource("CylinderShape3D_7ar0m")
+
+[node name="Menu" parent="." instance=ExtResource("7_qhabo")]
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

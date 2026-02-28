@@ -1,13 +1,238 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwuv2qnis0sgn"]
 
-[ext_resource type="PackedScene" uid="uid://bolwbohk77wbe" path="res://modelos/TILE.glb" id="1_so3t7"]
+[ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/tile.tres" id="1_3dd21"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="TILE" parent="." instance=ExtResource("1_so3t7")]
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="."]
 
-[node name="TILE2" parent="." instance=ExtResource("1_so3t7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="CSGCombiner3D2"]
 
-[node name="TILE3" parent="." instance=ExtResource("1_so3t7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.38, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853269, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.58327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.50327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.38, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853269, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.58327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.042, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.50327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGCombiner3D3" type="CSGCombiner3D" parent="CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.38, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853269, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.58327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.042, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.50327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGCombiner3D4" type="CSGCombiner3D" parent="CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.19, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.38, 0, 0)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853269, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.58327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D12" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04169, 0, 1.52914)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.50327, 0, 1.5)
+mesh = ExtResource("1_3dd21")
+
+[node name="CSGMesh3D15" type="CSGMesh3D" parent="CSGCombiner3D2/CSGCombiner3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 0, 1.5)
+mesh = ExtResource("1_3dd21")

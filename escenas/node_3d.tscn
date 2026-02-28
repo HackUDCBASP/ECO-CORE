@@ -5,8 +5,7 @@
 [ext_resource type="Script" path="res://escenas/spring_arm_3d.gd" id="3_1pben"]
 [ext_resource type="Script" path="res://escenas/scanf.gd" id="3_ce11i"]
 [ext_resource type="ArrayMesh" uid="uid://dgjx3eugv7k5r" path="res://modelos/scanf_azul.tres" id="4_ha46q"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_85whk"]
+[ext_resource type="ArrayMesh" uid="uid://fylju88c6xmy" path="res://modelos/Drapy.tres" id="4_ypkyq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6f8al"]
 
@@ -2508,10 +2507,8 @@ mesh = ExtResource("1_3dd21")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9274, 2.3532, 0)
 script = ExtResource("2_yyuaf")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Jugador/CharacterBody3D"]
-mesh = SubResource("CapsuleMesh_85whk")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Jugador/CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.657676, 0)
 shape = SubResource("CapsuleShape3D_6f8al")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Jugador/CharacterBody3D"]
@@ -2521,6 +2518,13 @@ script = ExtResource("3_1pben")
 
 [node name="Camera3D" type="Camera3D" parent="Jugador/CharacterBody3D/SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.48827)
+
+[node name="Node3D" type="Node3D" parent="Jugador/CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Jugador/CharacterBody3D/Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.20148, 0)
+mesh = ExtResource("4_ypkyq")
+skeleton = NodePath("../..")
 
 [node name="Ambiente" type="Node3D" parent="."]
 

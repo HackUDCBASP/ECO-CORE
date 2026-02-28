@@ -4,6 +4,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var camera = $SpringArm3D/Camera3D
+@onready var model = $Node3D
 
 func _physics_process(delta: float) -> void:
 	# Gravedad
@@ -16,13 +17,10 @@ func _physics_process(delta: float) -> void:
 
 	# Input
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-
-	# dirección relativa a la cámara
 	var cam_basis = camera.global_transform.basis
-	var forward = -cam_basis.z  # Hacia donde mira la cámara
+	var forward = -cam_basis.z
 	var right = cam_basis.x
 
-	#aplanamos los vectores para que el personaje no vuele/se hunda
 	forward.y = 0
 	right.y = 0
 	forward = forward.normalized()
@@ -38,3 +36,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+	# Rotar el modelo hacia la dirección del movimiento
+	if direction.length() > 0:
+		model.look_at(model.global_transform.origin - direction, Vector3.UP)

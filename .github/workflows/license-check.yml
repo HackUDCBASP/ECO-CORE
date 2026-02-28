@@ -1,4 +1,4 @@
-name: Check Addons Allowed Licenses
+name: Godot Addons License & Lint Check
 
 on:
   push:
@@ -7,46 +7,46 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  license-check:
+  check:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout del repositorio
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Verificar que cada addon tenga LICENSE
       - name: Check each addon has LICENSE
         run: |
           missing=false
           for dir in addons/*; do
             if [ -d "$dir" ] && [ ! -f "$dir/LICENSE" ]; then
-              echo "❌ Missing LICENSE in $dir"
+              echo "Missing LICENSE in $dir"
               missing=true
             fi
           done
           if [ "$missing" = true ]; then
             exit 1
+          fi
 
-      # 3️⃣ Instalar ScanCode Toolkit
       - name: Install ScanCode Toolkit
         run: |
+          pip install --upgrade pip
           pip install scancode-toolkit
 
-      # 4️⃣ Escanear licencias en addons
       - name: Scan licenses
         run: |
           scancode --license --json licenses.json addons/
 
-      # 5️⃣ Falla si se encuentra licencia NO permitida
       - name: Fail if license is not allowed
         run: |
-          # Licencias permitidas: MIT, BSD-2-Clause, BSD-3-Clause, Apache-2.0, GPL-2.0, GPL-3.0
           ALLOWED="MIT|BSD-2-Clause|BSD-3-Clause|Apache-2.0|GPL-2.0|GPL-3.0"
-          
-          # Busca licencias detectadas que no estén en la lista de permitidas
           forbidden=$(grep -Po '"key": "\K[^"]+' licenses.json | grep -vE "$ALLOWED" || true)
           if [ -n "$forbidden" ]; then
-            echo "❌ Forbidden licenses detected: $forbidden"
+            echo "Forbidden licenses detected: $forbidden"
             exit 1
           fi
+
+      - name: Run gdlint
+        run: |
+          pip install gdtoolkit
+          # Si no tienes gdlint.toml, gdlint usa defaults
+          gdlint .

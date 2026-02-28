@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://k4le5mcmy73s"]
+
+[ext_resource type="PackedScene" uid="uid://b4dfvyhlt57r5" path="res://modelos/repoquieto.glb" id="1_g1sca"]
+
+[node name="repoquieto" instance=ExtResource("1_g1sca")]

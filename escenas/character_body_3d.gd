@@ -4,11 +4,14 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var camera = $SpringArm3D/Camera3D
-@onready var model = $repoandando
-@onready var anim_player = $repoandando/AnimationPlayer
+@onready var model = $repoandando2
+@onready var anim_player = $repoandando2/AnimationPlayer
+@onready var anim_player2 = $repoandando2/AnimationPlayer2
 
-func _process(delta: float) -> void:
-	$repoandando/AnimationPlayer.play("Esqueleto_accion")
+
+func _ready():
+	print(anim_player.get_animation_list())
+	print(anim_player2.get_animation_list())
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -41,6 +44,6 @@ func _physics_process(delta: float) -> void:
 
 	# Animaciones
 	if direction.length() > 0.1 and is_on_floor():
-		anim_player.play("repoandando")
+		anim_player.play("Esqueleto_acción")
 	else:
-		pass #anim_player.play("repoquieto")
+		anim_player2.play("Esqueleto_acción_001")

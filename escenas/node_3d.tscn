@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=74 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/otros/tile.tres" id="1_3dd21"]
 [ext_resource type="Script" path="res://escenas/juego.gd" id="1_vst57"]
@@ -31,12 +31,24 @@
 [ext_resource type="Script" path="res://modelos/npcs/oso_67.gd" id="22_bphcn"]
 [ext_resource type="Script" path="res://escenas/area_3d_3.gd" id="22_kp6ob"]
 [ext_resource type="PackedScene" uid="uid://bd3jxw8k67b7w" path="res://modelos/estructuras/pedras.glb" id="22_nricn"]
+[ext_resource type="PackedScene" uid="uid://bt0cpbr4seako" path="res://modelos/trash/contenedor amarillo.glb" id="22_nxfwj"]
 [ext_resource type="Script" path="res://escenas/area_3d_2.gd" id="22_v8lle"]
+[ext_resource type="Script" path="res://escenas/plastico.gd" id="22_ydu6h"]
 [ext_resource type="PackedScene" uid="uid://cblo0dncjm88b" path="res://modelos/estructuras/hoguera completa.glb" id="23_jm3hh"]
+[ext_resource type="PackedScene" uid="uid://3y2ljksf11x7" path="res://modelos/trash/contenedor azul.glb" id="23_ka1vf"]
+[ext_resource type="PackedScene" uid="uid://lwakhux6pbln" path="res://modelos/trash/contenedor marron.glb" id="24_a5qpp"]
+[ext_resource type="Script" path="res://escenas/papel.gd" id="24_al13v"]
 [ext_resource type="PackedScene" uid="uid://bueuitx3ylkp6" path="res://modelos/npcs/oso67.glb" id="24_gboaa"]
+[ext_resource type="Script" path="res://escenas/organico.gd" id="26_ktrbw"]
 [ext_resource type="PackedScene" uid="uid://p8q0irgsivri" path="res://modelos/npcs/SCANF ROJO ANIMADO.glb" id="30_kx0f7"]
 [ext_resource type="PackedScene" uid="uid://n5p8ov62ogg7" path="res://modelos/otros/cerillas.glb" id="31_5ijmq"]
 [ext_resource type="Script" path="res://escenas/area_3d_6.gd" id="31_g1vr3"]
+[ext_resource type="PackedScene" uid="uid://saipgn7ta6q1" path="res://modelos/trash/manzana.glb" id="41_5cxof"]
+[ext_resource type="Script" path="res://escenas/area_3d_10.gd" id="41_yrbvi"]
+[ext_resource type="PackedScene" uid="uid://dl5qfnvuarq3j" path="res://modelos/trash/botella.glb" id="42_r0lyb"]
+[ext_resource type="Script" path="res://escenas/area_3d_9.gd" id="43_3nyw6"]
+[ext_resource type="PackedScene" uid="uid://nqfoasj5d6b7" path="res://modelos/trash/papeles.glb" id="43_d4uim"]
+[ext_resource type="Script" path="res://escenas/area_3d_8.gd" id="44_hvlcy"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vqt2p"]
 
@@ -64,6 +76,15 @@ size = Vector3(7.20972, 1, 13.4694)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_elhx7"]
 height = 3.79409
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gy2vm"]
+size = Vector3(3.44824, 3.04578, 1.83813)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u7543"]
+size = Vector3(2.88232, 3.10394, 1.93555)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhkja"]
+size = Vector3(2.58008, 3.07617, 1.66064)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6btbb"]
 size = Vector3(4.17981, 3.43695, 3.98718)
 
@@ -89,6 +110,15 @@ size = Vector3(2.01868, 1.47449, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mil8r"]
 size = Vector3(1.96387, 1, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y523q"]
+radius = 1.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h6by0"]
+radius = 1.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ayngx"]
+radius = 1.5
 
 [node name="Juego" type="Node3D"]
 script = ExtResource("1_vst57")
@@ -4625,6 +4655,36 @@ script = ExtResource("20_invvk")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7/CollisionShape3D/SCANF VERDE ANIMADO/StaticBody3D"]
 shape = SubResource("CylinderShape3D_elhx7")
 
+[node name="Area3D2" type="Area3D" parent="Area3D7"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -42.685, -1.66316, -54.3585)
+script = ExtResource("22_ydu6h")
+
+[node name="contenedor amarillo" parent="Area3D7/Area3D2" instance=ExtResource("22_nxfwj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158691, 1.02289, -0.419067)
+shape = SubResource("BoxShape3D_gy2vm")
+
+[node name="Area3D3" type="Area3D" parent="Area3D7"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34.5557, -1.66316, -67.8958)
+script = ExtResource("24_al13v")
+
+[node name="contenedor azul" parent="Area3D7/Area3D3" instance=ExtResource("23_ka1vf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7/Area3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119873, 0.834625, -0.467773)
+shape = SubResource("BoxShape3D_u7543")
+
+[node name="Area3D" type="Area3D" parent="Area3D7"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34.3426, -1.66316, -31.7847)
+script = ExtResource("26_ktrbw")
+
+[node name="contenedor marron" parent="Area3D7/Area3D" instance=ExtResource("24_a5qpp")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0400391, 1.03809, 0.330322)
+shape = SubResource("BoxShape3D_vhkja")
+
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7693, 0.786303, -12.2065)
 script = ExtResource("3_ce11i")
@@ -4725,5 +4785,38 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -7.69044, 0, -40.401
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.66379, 0.381934, -40.3906)
 shape = SubResource("BoxShape3D_mil8r")
+
+[node name="Area3D10" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.2304, 0.220172, 4.10201)
+script = ExtResource("41_yrbvi")
+
+[node name="manzana" parent="Area3D10" instance=ExtResource("41_5cxof")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.1482, 0.234941, -34.0118)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9957, 0.118099, -33.9839)
+shape = SubResource("SphereShape3D_y523q")
+
+[node name="Area3D9" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5666, 0.602105, -36.2886)
+script = ExtResource("43_3nyw6")
+
+[node name="botella" parent="Area3D9" instance=ExtResource("42_r0lyb")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -20.7972, -0.381934, 13.8154)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9641, -0.0511248, 13.7487)
+shape = SubResource("SphereShape3D_h6by0")
+
+[node name="Area3D8" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5666, 0.602105, -36.2886)
+script = ExtResource("44_hvlcy")
+
+[node name="papeles" parent="Area3D8" instance=ExtResource("43_d4uim")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -13.4409, -0.381934, 25.4435)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4983, -0.197635, 25.3144)
+shape = SubResource("SphereShape3D_ayngx")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

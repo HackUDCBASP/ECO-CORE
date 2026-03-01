@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci1gfa11j3n3d"]
 
-[ext_resource type="PackedScene" uid="uid://bo7hux1453f0" path="res://modelos/repoandando.glb" id="1_h3juh"]
+[ext_resource type="PackedScene" uid="uid://bo7hux1453f0" path="res://modelos/npcs/repoandando.glb" id="1_h3juh"]
 
 [sub_resource type="Animation" id="Animation_2t7l7"]
 resource_name = "Esqueleto_acción_001"

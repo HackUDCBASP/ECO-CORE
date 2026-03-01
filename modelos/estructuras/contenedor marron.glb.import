@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bo7hux1453f0"
-path="res://.godot/imported/repoandando.glb-3840f82c2cfa9cff84413e51a38a9c3c.scn"
+uid="uid://4wukcgfq6rv7"
+path="res://.godot/imported/contenedor marron.glb-1372ddb5f69a5bfa412e1616675516cd.scn"
 
 [deps]
 
-source_file="res://modelos/repoandando.glb"
-dest_files=["res://.godot/imported/repoandando.glb-3840f82c2cfa9cff84413e51a38a9c3c.scn"]
+source_file="res://modelos/estructuras/contenedor marron.glb"
+dest_files=["res://.godot/imported/contenedor marron.glb-1372ddb5f69a5bfa412e1616675516cd.scn"]
 
 [params]
 

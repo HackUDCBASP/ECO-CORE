@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bbt5k6lgjoeok"
-path="res://.godot/imported/SCANF AZUL.glb-3b139330d8e1129247c88caf7773e7fe.scn"
+uid="uid://rulu2o73f5hr"
+path="res://.godot/imported/CASA AMARILLA.glb-97c16bd794e48cbfc0a73309727c2653.scn"
 
 [deps]
 
-source_file="res://modelos/SCANF AZUL.glb"
-dest_files=["res://.godot/imported/SCANF AZUL.glb-3b139330d8e1129247c88caf7773e7fe.scn"]
+source_file="res://modelos/estructuras/CASA AMARILLA.glb"
+dest_files=["res://.godot/imported/CASA AMARILLA.glb-97c16bd794e48cbfc0a73309727c2653.scn"]
 
 [params]
 

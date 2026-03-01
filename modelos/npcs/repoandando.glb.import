@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b83i2a0ivs8r"
-path="res://.godot/imported/SCANF VERDE.glb-0287f593a4b56a954f8b92e997c923c4.scn"
+uid="uid://bo7hux1453f0"
+path="res://.godot/imported/repoandando.glb-1836ca1bc2f562540ff21d3cdcc85dad.scn"
 
 [deps]
 
-source_file="res://modelos/SCANF VERDE.glb"
-dest_files=["res://.godot/imported/SCANF VERDE.glb-0287f593a4b56a954f8b92e997c923c4.scn"]
+source_file="res://modelos/npcs/repoandando.glb"
+dest_files=["res://.godot/imported/repoandando.glb-1836ca1bc2f562540ff21d3cdcc85dad.scn"]
 
 [params]
 

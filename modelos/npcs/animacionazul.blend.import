@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxq11pithdlnj"
-path="res://.godot/imported/repoquieto.blend-b3432fc1e5794b09dc62388f782d30de.scn"
+uid="uid://x4myvmcmainq"
+path="res://.godot/imported/animacionazul.blend-efd7fe290f5b45e940284daf4247b711.scn"
 
 [deps]
 
-source_file="res://modelos/repoquieto.blend"
-dest_files=["res://.godot/imported/repoquieto.blend-b3432fc1e5794b09dc62388f782d30de.scn"]
+source_file="res://modelos/npcs/animacionazul.blend"
+dest_files=["res://.godot/imported/animacionazul.blend-efd7fe290f5b45e940284daf4247b711.scn"]
 
 [params]
 

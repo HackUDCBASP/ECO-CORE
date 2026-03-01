@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://8ljksj3lmqaj"
-path="res://.godot/imported/E.glb-2a1f0ff4428ce0d32b0b0aa2f4f3cdee.scn"
+uid="uid://cm5ugdtkltd3i"
+path="res://.godot/imported/SCANF VERDE ANIMADO.glb-954976b7314a9b625e0587edd69d5929.scn"
 
 [deps]
 
-source_file="res://modelos/E.glb"
-dest_files=["res://.godot/imported/E.glb-2a1f0ff4428ce0d32b0b0aa2f4f3cdee.scn"]
+source_file="res://modelos/npcs/SCANF VERDE ANIMADO.glb"
+dest_files=["res://.godot/imported/SCANF VERDE ANIMADO.glb-954976b7314a9b625e0587edd69d5929.scn"]
 
 [params]
 

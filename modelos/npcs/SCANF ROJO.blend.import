@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d61h1mv3qnua"
-path="res://.godot/imported/repoandando.blend-b9d2dbadbe9a6945fd968bd41cc04cf2.scn"
+uid="uid://bpg42yfecjxme"
+path="res://.godot/imported/SCANF ROJO.blend-f404444629f96ab9f00c279b94c5a7d8.scn"
 
 [deps]
 
-source_file="res://modelos/repoandando.blend"
-dest_files=["res://.godot/imported/repoandando.blend-b9d2dbadbe9a6945fd968bd41cc04cf2.scn"]
+source_file="res://modelos/npcs/SCANF ROJO.blend"
+dest_files=["res://.godot/imported/SCANF ROJO.blend-f404444629f96ab9f00c279b94c5a7d8.scn"]
 
 [params]
 

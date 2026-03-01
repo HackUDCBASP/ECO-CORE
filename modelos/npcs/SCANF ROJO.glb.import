@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2tkkuh02kyp8"
-path="res://.godot/imported/SCANF AZUL ANIMADO.glb-9611cb0b9951a5ca5251bd5bcde7ffd4.scn"
+uid="uid://b8edwfi1sn1fl"
+path="res://.godot/imported/SCANF ROJO.glb-b93d231c8614af4191bf0a1452765e18.scn"
 
 [deps]
 
-source_file="res://modelos/SCANF AZUL ANIMADO.glb"
-dest_files=["res://.godot/imported/SCANF AZUL ANIMADO.glb-9611cb0b9951a5ca5251bd5bcde7ffd4.scn"]
+source_file="res://modelos/npcs/SCANF ROJO.glb"
+dest_files=["res://.godot/imported/SCANF ROJO.glb-b93d231c8614af4191bf0a1452765e18.scn"]
 
 [params]
 

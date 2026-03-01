@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8rh832nk3108"
-path="res://.godot/imported/CASA AZUL.glb-9598646db6d13ec8264da39edc1f035c.scn"
+uid="uid://bueuitx3ylkp6"
+path="res://.godot/imported/oso67.glb-4fe7a5b4630e7e3adb1ad4d62a0b0f5c.scn"
 
 [deps]
 
-source_file="res://modelos/CASA AZUL.glb"
-dest_files=["res://.godot/imported/CASA AZUL.glb-9598646db6d13ec8264da39edc1f035c.scn"]
+source_file="res://modelos/npcs/oso67.glb"
+dest_files=["res://.godot/imported/oso67.glb-4fe7a5b4630e7e3adb1ad4d62a0b0f5c.scn"]
 
 [params]
 

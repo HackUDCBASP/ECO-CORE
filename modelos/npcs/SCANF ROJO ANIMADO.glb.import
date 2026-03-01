@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bbdw6b606lpqq"
-path="res://.godot/imported/CASA ROJA.glb-f2e8ed502b7782914e4ba7ecf0db2e54.scn"
+uid="uid://p8q0irgsivri"
+path="res://.godot/imported/SCANF ROJO ANIMADO.glb-34278579b2d4803fbe034df1b005eeb4.scn"
 
 [deps]
 
-source_file="res://modelos/CASA ROJA.glb"
-dest_files=["res://.godot/imported/CASA ROJA.glb-f2e8ed502b7782914e4ba7ecf0db2e54.scn"]
+source_file="res://modelos/npcs/SCANF ROJO ANIMADO.glb"
+dest_files=["res://.godot/imported/SCANF ROJO ANIMADO.glb-34278579b2d4803fbe034df1b005eeb4.scn"]
 
 [params]
 

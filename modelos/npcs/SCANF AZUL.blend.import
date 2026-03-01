@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://x4myvmcmainq"
-path="res://.godot/imported/animacionazul.blend-7f236425b19c312ecd3d6dc74cd6eaa1.scn"
+uid="uid://ca0gw8ymfooxn"
+path="res://.godot/imported/SCANF AZUL.blend-2c2091ab829e2d0892c6002cd22a5f1a.scn"
 
 [deps]
 
-source_file="res://modelos/animacionazul.blend"
-dest_files=["res://.godot/imported/animacionazul.blend-7f236425b19c312ecd3d6dc74cd6eaa1.scn"]
+source_file="res://modelos/npcs/SCANF AZUL.blend"
+dest_files=["res://.godot/imported/SCANF AZUL.blend-2c2091ab829e2d0892c6002cd22a5f1a.scn"]
 
 [params]
 

@@ -5,7 +5,7 @@ var can_interact := false
 var exclamation_mark: Node3D = null
 var dialog_active := false
 
-@onready var exclamation_scene = preload("res://modelos/E.glb")
+@onready var exclamation_scene = preload("res://modelos/otros/E.glb")
 @export var interact_action := "interact"
 
 signal dialog_started

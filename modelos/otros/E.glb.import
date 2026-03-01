@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://rulu2o73f5hr"
-path="res://.godot/imported/CASA AMARILLA.glb-2c39216469410595ee8dba16be3da81b.scn"
+uid="uid://8ljksj3lmqaj"
+path="res://.godot/imported/E.glb-0365052ba5684c53ba44ccb43dcd2fc2.scn"
 
 [deps]
 
-source_file="res://modelos/CASA AMARILLA.glb"
-dest_files=["res://.godot/imported/CASA AMARILLA.glb-2c39216469410595ee8dba16be3da81b.scn"]
+source_file="res://modelos/otros/E.glb"
+dest_files=["res://.godot/imported/E.glb-0365052ba5684c53ba44ccb43dcd2fc2.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b4dfvyhlt57r5"
-path="res://.godot/imported/repoquieto.glb-2980b47918fef4df8bab999e53cf4645.scn"
+path="res://.godot/imported/repoquieto.glb-7149427d358b7f67ea6f01a2c1058f37.scn"
 
 [deps]
 
-source_file="res://modelos/repoquieto.glb"
-dest_files=["res://.godot/imported/repoquieto.glb-2980b47918fef4df8bab999e53cf4645.scn"]
+source_file="res://modelos/npcs/repoquieto.glb"
+dest_files=["res://.godot/imported/repoquieto.glb-7149427d358b7f67ea6f01a2c1058f37.scn"]
 
 [params]
 

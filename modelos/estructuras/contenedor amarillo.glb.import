@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://boe5j2j5j1dv4"
-path="res://.godot/imported/repo.glb-4deb73896066df20463cec9c4d393be8.scn"
+uid="uid://8mknbo40scid"
+path="res://.godot/imported/contenedor amarillo.glb-4557e6f87e8d7432b495b463c526ce7c.scn"
 
 [deps]
 
-source_file="res://modelos/repo.glb"
-dest_files=["res://.godot/imported/repo.glb-4deb73896066df20463cec9c4d393be8.scn"]
+source_file="res://modelos/estructuras/contenedor amarillo.glb"
+dest_files=["res://.godot/imported/contenedor amarillo.glb-4557e6f87e8d7432b495b463c526ce7c.scn"]
 
 [params]
 

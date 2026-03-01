@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=55 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/otros/tile.tres" id="1_3dd21"]
 [ext_resource type="Script" path="res://escenas/juego.gd" id="1_vst57"]
@@ -77,9 +77,6 @@ size = Vector3(5.48206, 4.62289, 2.90973)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3mx31"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3qs1x"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_5mv6c"]
-size = Vector3(3.35327, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pi10g"]
 size = Vector3(1.51929, 1, 1.42847)
@@ -4684,16 +4681,16 @@ shape = SubResource("CylinderShape3D_3qs1x")
 [node name="Area3D4" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9515, 0.220172, 8.32188)
 script = ExtResource("21_2v8cl")
+interact_action = null
+head_offset = null
 
-[node name="hoguerasinpedras" parent="Area3D4" instance=ExtResource("21_tspwe")]
+[node name="hoguera sin pedras" parent="Area3D4" instance=ExtResource("21_tspwe")]
 
-[node name="hogueracompleta" parent="Area3D4" instance=ExtResource("23_jm3hh")]
+[node name="hoguera completa" parent="Area3D4" instance=ExtResource("23_jm3hh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000488281, -0.00017193, 0.000118256)
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.676636, 0.964272, 0)
-shape = SubResource("BoxShape3D_5mv6c")
 
 [node name="Area3D3" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.2794, 0.220172, 16.6341)

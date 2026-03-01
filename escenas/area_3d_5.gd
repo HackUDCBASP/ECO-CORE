@@ -7,8 +7,7 @@ var dialog_active := false
 
 @onready var exclamation_scene = preload("res://modelos/otros/E.glb")
 @export var interact_action := "interact"
-@export var dialogo_normal: String = "scanf"
-@export var dialogo_hoguera: String = "hoguera"
+@export var dialogo_normal: String = "ghindrox"
 
 signal dialog_started
 signal dialog_ended
@@ -54,11 +53,7 @@ func start_dialog() -> void:
 	hide_exclamation()
 	block_player_movement(true)
 	
-	# Elegir diálogo según si el jugador tiene las cerillas
 	var dialogo_a_usar = dialogo_normal
-	if tiene_cerillas():
-		dialogo_a_usar = dialogo_hoguera
-		consumir_cerillas()   # Quitar las cerillas después de usarlas
 	
 	dialog_started.emit()
 	
@@ -97,19 +92,3 @@ func block_player_movement(block: bool) -> void:
 
 func _on_dialog_ended() -> void:
 	end_dialog()
-
-# ----- Funciones específicas para cerillas -----
-func tiene_cerillas() -> bool:
-	"""Devuelve true si el jugador tiene el nodo cerillas como hijo"""
-	if current_player == null:
-		return false
-	# Buscamos el nodo por su nombre (asumimos que se llama "cerillas")
-	return current_player.has_node("cerillas")
-
-func consumir_cerillas() -> void:
-	"""Elimina el nodo cerillas del jugador (se consumen al usarlas)"""
-	if current_player == null:
-		return
-	var cerillas = current_player.get_node_or_null("cerillas")
-	if cerillas:
-		cerillas.queue_free()

@@ -4607,6 +4607,9 @@ shadow_enabled = true
 [node name="Area3D7" type="Area3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 47.0884, 1.05175, 9.68958)
 script = ExtResource("17_tc4ih")
+interact_action = null
+dialogo_normal = null
+dialogo_secundario = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32636, -0.352722, -1.9862)
@@ -4684,6 +4687,8 @@ shape = SubResource("CylinderShape3D_3qs1x")
 [node name="Area3D4" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.9515, 0.220172, 8.32188)
 script = ExtResource("21_2v8cl")
+interact_action = null
+head_offset = null
 
 [node name="hoguerasinpedras" parent="Area3D4" instance=ExtResource("21_tspwe")]
 

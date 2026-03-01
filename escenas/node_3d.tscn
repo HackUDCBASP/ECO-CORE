@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bwuv2qnis0sgn"]
+[gd_scene load_steps=30 format=3 uid="uid://bwuv2qnis0sgn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cqivip0by7yvu" path="res://modelos/otros/tile.tres" id="1_3dd21"]
 [ext_resource type="Script" path="res://escenas/juego.gd" id="1_vst57"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://rulu2o73f5hr" path="res://modelos/estructuras/CASA AMARILLA.glb" id="11_kce75"]
 [ext_resource type="PackedScene" uid="uid://b8rh832nk3108" path="res://modelos/estructuras/CASA AZUL.glb" id="12_x4yiy"]
 [ext_resource type="PackedScene" uid="uid://bbdw6b606lpqq" path="res://modelos/estructuras/CASA ROJA.glb" id="13_kekmg"]
+[ext_resource type="PackedScene" uid="uid://bykhevwdbiv7e" path="res://modelos/estructuras/arbol.glb" id="20_ajdui"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vqt2p"]
 
@@ -4562,7 +4563,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.7644
 shadow_enabled = true
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.4344, 0.786303, -12.2065)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7693, 0.786303, -12.2065)
 script = ExtResource("3_ce11i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
@@ -4582,5 +4583,20 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.584308, 0)
 shape = SubResource("CylinderShape3D_7ar0m")
 
 [node name="Menu" parent="." instance=ExtResource("7_qhabo")]
+
+[node name="arbol" parent="." instance=ExtResource("20_ajdui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.0277, 0.248468, 3.31104)
+
+[node name="arbol2" parent="." instance=ExtResource("20_ajdui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.2684, 0.220174, 14.5829)
+
+[node name="arbol3" parent="." instance=ExtResource("20_ajdui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.6111, 0.220172, 2.93527)
+
+[node name="arbol4" parent="." instance=ExtResource("20_ajdui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.8941, 0.220172, 10.2125)
+
+[node name="arbol5" parent="." instance=ExtResource("20_ajdui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2943, 0.220171, 11.8626)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

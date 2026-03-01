@@ -35,7 +35,7 @@ Este proyecto fue desarrollado por un equipo de cuatro personas:
 3. **Ejecutar el juego** desde el editor o exportarlo para tu plataforma preferida.
 
 ## OPCIÓN 2
-1. **Descargar el ejecutable situado en /ejecutables**
+1. **Descargar el ejecutable situado en el último tag**
 2. **Disfrutar**
 
 ## 📜 Licencia
